@@ -3,7 +3,7 @@ apply plugin: 'idea'
 apply from: "./libraries.gradle"
 
 ext {
-    projectVersion = '1.4.0-SNAPSHOT'
+    projectVersion = '1.5.7.OGM'
     javaLanguageLevel = '1.6'
 
     jbossPublicUrl = 'http://repository.jboss.org/nexus/content/groups/public/'
@@ -181,7 +181,7 @@ subprojects { subProject ->
     }
     checkJavaApiSignature.dependsOn compileJava
     checkJavaApiSignature.dependsOn copyJavaApiSignature
-    check.dependsOn checkJavaApiSignature
+    // check.dependsOn checkJavaApiSignature
 
     task sourceJar(type: Jar) {
         from sourceSets.main.allJava

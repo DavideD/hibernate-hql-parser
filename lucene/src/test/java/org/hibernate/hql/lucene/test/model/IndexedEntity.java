@@ -72,7 +72,7 @@ public class IndexedEntity {
 		return position;
 	}
 
-	@Field(analyze = Analyze.NO, indexNullAs = Field.DEFAULT_NULL_TOKEN)
+	@Field(analyze = Analyze.NO, indexNullAs = "-9223372036854775808")
 	public long getCode() {
 		return code;
 	}
